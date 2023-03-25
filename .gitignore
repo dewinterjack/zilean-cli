@@ -1,0 +1,16 @@
+# python virtualenv
+.env
+.venv
+env/
+venv/
+
+# logs
+*.log
+logs/
+
+__pycache__/
+*.egg-info
+*.egg
+
+# misc
+.DS_Store
