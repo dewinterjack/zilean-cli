@@ -4,6 +4,8 @@ The zilean-cli will answer your League of Legends questions.
 
 ### Usage
 
+`pip install -r requirements.txt`
+
 `python zilean.py`
 
 <p align="center">
