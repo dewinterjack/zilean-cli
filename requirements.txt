@@ -3,3 +3,4 @@ python-dotenv==1.0.0
 rich==13.3.2
 praw==7.7.0
 googlesearch-python==1.1.0
+promptlayer==0.1.77
