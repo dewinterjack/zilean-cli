@@ -26,16 +26,16 @@ it should be worded as if it is in response to the question field,
 like a coach giving an answer to a student.
 """
 
-tags=["prompt-actor", "aggregate", "pertinent-extraction", "chat-response"]
+tags=["prompt-actor", "aggregate", "pertinent-extraction", "chat-response", "to-vocalize"]
 
 def ask(prompt):
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo-0301",
         messages=[
             {"role": "system", "content": system_message},
             {"role": "user", "content": prompt},
         ],
-        max_tokens=100, pl_tags=tags,)
+        max_tokens=150, pl_tags=tags,)
 
     if response.choices[0].finish_reason == "incomplete":
         print("Warning: Response is incomplete.")

@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import os
+from speech_answer import get_voice
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 PROMPTLAYER_API_KEY = os.getenv("PROMPTLAYER_API_KEY")
 
@@ -25,7 +26,11 @@ with console.status("[bold green]:crystal_ball: Asking Zilean...") as status:
     search_reddit = answers.get_comments(query)
     response = gpt.ask(search_reddit)
     inspect(response)
-    console.print(response.choices[0].message.content, style="bold magenta")
+    console.print(search_reddit, style="bold blue")
+    zilean_answer = response.choices[0].message.content
+    console.print(zilean_answer, style="bold magenta")
+    get_voice(zilean_answer)
+    
 
 
 #print(":crystal_ball: [bold magenta]Ask Zilean...[/bold magenta] :joystick:")
