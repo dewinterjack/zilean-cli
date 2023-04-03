@@ -15,11 +15,11 @@ def generate_speech_file(text):
     })
 
     headers = {
-    'xi-api-key': 'token',
+    'xi-api-key': 'b8a82e49685e8a69158bdd2cacdc169e',
     'Content-Type': 'application/json'
     }
 
-    response = requests.post(url, headers=headers, data=payload, timeout=100)
+    response = requests.post(url, headers=headers, data=payload, timeout=500)
     try:
         response.raise_for_status()
         audio_data = BytesIO(response.content)
